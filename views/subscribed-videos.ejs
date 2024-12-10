@@ -1,0 +1,21 @@
+<!-- views/subscribed-videos.ejs -->
+<%- include('header') %>
+
+<div class="container mt-5">
+  <h2>Your Subscribed Videos</h2>
+  <div class="row">
+    <% videos.forEach(function(video) { %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="<%= video.thumbnail %>" class="card-img-top" alt="video-thumbnail">
+          <div class="card-body">
+            <h5 class="card-title"><%= video.title %></h5>
+            <a href="/video/<%= video._id %>" class="btn btn-primary">Watch</a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('footer') %>

@@ -1,0 +1,25 @@
+<!-- views/dashboard.ejs -->
+<%- include('header') %>
+
+<div class="container mt-5">
+  <h2>Welcome to your Dashboard</h2>
+
+  <h3 class="mt-4">Upload a New Video</h3>
+  <form action="/upload-video" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="title" class="form-label">Video Title</label>
+      <input type="text" name="title" id="title" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" name="description" id="description" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="video" class="form-label">Choose Video</label>
+      <input type="file" name="video" id="video" class="form-control" accept="video/*" required>
+    </div>
+    <button type="submit" class="btn btn-success">Upload Video</button>
+  </form>
+</div>
+
+<%- include('footer') %>

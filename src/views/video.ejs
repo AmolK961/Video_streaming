@@ -1,0 +1,15 @@
+<!-- views/video.ejs -->
+<%- include('header') %>
+
+<div class="container mt-5">
+  <h1 class="mb-3"><%= video.title %></h1>
+  <div class="embed-responsive embed-responsive-16by9">
+    <video controls class="embed-responsive-item">
+      <source src="/stream/<%= video._id %>" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <p class="mt-3"><%= video.description %></p>
+</div>
+
+<%- include('footer') %>
